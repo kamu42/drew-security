@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: 'Satoshi', sans-serif;
 }
 
 .header {
@@ -207,7 +208,7 @@ body {
     transform: translateX(0); 
     transition: transform 240ms ease-in-out;
     z-index: 1;
-    background-image: url('../assets/sideBG.png');
+    background-image: url('./assets/side-bg.png');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;

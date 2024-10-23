@@ -1,16 +1,12 @@
 .protection-section {
-    text-align: center;
     color: #f5efe6;
     margin: 0 34px 0 30px;
-    background-image: url(../assets/3d-network-background.png);
+    background-image: url(./assets/hero-bg.png);
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 41px;
     font-family: 'Satoshi', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     min-width: 329px;
     min-height: 653px;
     container-type: inline-size;
@@ -70,9 +66,9 @@
 
   .protection-stats {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     border-radius: 35px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
     width: 303px;
     height: 252px;
     
@@ -81,7 +77,6 @@
     
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
 
    }
 
@@ -127,7 +122,6 @@
     cursor: pointer;
     margin: 0 23px 0 48px;
   }
-  /* //////////////////////////////////////////////////////////// */
 
   .statsContainer {
     display: flex;
@@ -167,8 +161,6 @@
     color: #f5efe6;
   }
 
-  /* //////////////////////////////////////////////////////////// */
-
   .trusted-brands {
     display: flex;
     justify-content: space-evenly;
@@ -205,3 +197,111 @@
     }
   }
   
+
+
+  // ////////////////////////////////////////////////////
+
+  $primary-color: #f5efe6;
+  $background-color: rgba(0, 0, 0, 0.6);
+  $font-size-title: 55px;
+  $font-size-subtitle: 18px;
+  $font-size-service-title: 24px;
+  $button-padding: 10px 20px;
+
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin transition($property, $duration, $timing) {
+    transition: $property $duration $timing;
+  }
+
+  .security-Services-Section {
+    text-align: center;
+    
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      margin-left: 190px;
+      margin-bottom: 87px;
+    }
+
+    .section-Title {
+      font-size: $font-size-title;
+      font-weight: bold;
+      color: $primary-color;
+      margin: 0 40px ;
+    }
+
+    .section-Subtitle {
+      font-size: $font-size-subtitle;
+      color: $primary-color;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .services-Container {
+      display: grid;
+      grid-template-columns: repeat(1, 3fr);
+      gap: 20px;
+      max-width: 1486px;
+      margin: 0 auto;
+
+      .service-Card {
+        border-radius: 39px;
+        padding: 30px;
+        color: $primary-color;
+        display: flex;
+        flex-direction: row;
+
+        background: transparent linear-gradient(180deg, rgba(112, 112, 112, 0.05) 0%, rgba(56, 56, 56, 1) 100%) 0% 0% no-repeat padding-box;
+        backdrop-filter: blur(50px) brightness(0%);
+
+        .icon {
+          margin-bottom: 20px;
+          border: solid 1px $primary-color;
+          border-radius: ;
+
+          img {
+            max-width: 40px;
+            padding: 20px;
+          }
+        }
+
+        .service-Title {
+          font-size: $font-size-service-title;
+          margin-bottom: 10px;
+        }
+
+        .service-Description {
+          font-size: $font-size-subtitle;
+          max-width: 954px;
+          
+        }
+
+        .book-Call-Button {
+          padding: $button-padding;
+          background-color: $primary-color;
+          border: none;
+          border-radius: 5px;
+          color: darken($primary-color, 90%);
+          cursor: pointer;
+          @include transition(background-color, 0.3s, ease);
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-Container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  }

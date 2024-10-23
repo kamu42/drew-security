@@ -2,13 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import cn from 'classnames';
 
-import styles from './Header.module.css';
+import styles from './header.module.scss';
 
-import { ReactComponent as Close } from '../assets/Close.svg';
-import { ReactComponent as MenuIcon } from '../assets/burguer.svg';
-import { ReactComponent as Arrow } from '../assets/arrow_right.svg';
-import { ReactComponent as Discord } from '../assets/Discord_icon.svg';
-import { ReactComponent as X } from '../assets/X_icon.svg';
+import { ReactComponent as Close } from './assets/Close.svg';
+import { ReactComponent as MenuIcon } from './assets/burguer.svg';
+import { ReactComponent as Arrow } from '../assets/arrow.svg';
+import { ReactComponent as Discord } from './assets/discord-icon.svg';
+import { ReactComponent as X } from './assets/x-icon.svg';
 
 const Header: React.FC = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);

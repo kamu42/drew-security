@@ -1,7 +1,14 @@
-import styles from './homepage.module.css';
+import styles from './homepage.module.scss';
 import cn from 'classnames';
 
-import { ReactComponent as Arrow } from '../assets/arrow_right.svg';
+import { ReactComponent as Arrow } from '../assets/arrow.svg';
+import Netflix from './assets/netflix-logo.svg';
+import Disney from './assets/disney-logo.svg';
+import W from './assets/w-logo.svg';
+
+import security from './assets/security-icon.svg'
+import settings from './assets/settings-icon.svg'
+import training from './assets/training-icon.svg'
 
 export function Home() {
   return (
@@ -68,25 +75,109 @@ export function Home() {
       </section>
 
       <div className={styles['trusted-brands']}>
-        <img src="../assets/Netflix_logo.svg" alt="Netflix" />
-        <img src="../assets/disney_logo.svg" alt="Disney" />
-        <img src="../assets/logo.svg" alt="Other Brand" />
+        <img src={Netflix} alt="Netflix" />
+        <img src={Disney} alt="Disney" />
+        <img src={W} alt="Other Brand" />
 
         <img
-          src="../assets/Netflix_logo.svg"
+          src={Netflix}
           alt="Netflix"
           className={cn(styles['second-brands'])}
         />
         <img
-          src="../assets/disney_logo.svg"
+          src={Disney}
           alt="Disney"
           className={cn(styles['second-brands'])}
         />
         <img
-          src="../assets/logo.svg"
+          src={W}
           alt="Other Brand"
           className={cn(styles['second-brands'])}
         />
+      </div>
+
+      <div className={styles['security-Services-Section']}>
+        <div className={styles['title']}>
+          <h2 className={styles['section-Title']}>Security Services</h2>
+          <p className={styles['section-Subtitle']}>
+            Web3 security built on top of Web2
+          </p>
+        </div>
+
+        <div className={styles['services-Container']}>
+          <div className={styles['service-Card']}>
+            <div className={styles['icon']}>
+              <img src={settings} alt="Setup Icon" />
+            </div>
+
+            <div>
+              <h3 className={styles['service-Title']}>Setup</h3>
+              <button className={styles['book-Call-Button']}>
+                Book a call
+              </button>
+            </div>
+
+            <p className={styles['service-Description']}>
+              Whether you are an established enterprise or a new venture,
+              securing your digital infrastructure is paramount. Our
+              comprehensive cybersecurity consulting services cover a wide range
+              of platforms, including Discord, X (formerly Twitter), Gmail, and
+              more. By ensuring your systems are properly configured and secure,
+              we help protect your brand's reputation, maintain trust in your
+              business, and safeguard your community from potential threats.
+            </p>
+          </div>
+
+          <div className={styles['service-Card']}>
+            <div className={styles['icon']}>
+              <img src={security} alt="Setup Icon" />
+            </div>
+
+            <div>
+              <h3 className={styles['service-Title']}>Security</h3>
+              <button className={styles['book-Call-Button']}>
+                Book a call
+              </button>
+            </div>
+
+            <p className={styles['service-Description']}>
+              Elevate your community's safety with our premier cybersecurity
+              consulting services. We prioritize member privacy and security by
+              implementing robust measures such as role-based permissions,
+              anti-spam filters, and advanced moderation tools. With our
+              expertise, your community remains protected from potential
+              threats, ensuring a seamless and secure experience for all users.
+              Safeguard your brand today and foster a thriving, secure
+              community.
+            </p>
+          </div>
+
+          <div className={styles['service-Card']}>
+            <div className={styles['icon']}>
+              <img src={training} alt="Setup Icon" />
+            </div>
+
+            <div>
+              <h3 className={styles['service-Title']}>Training</h3>
+              <button className={styles['book-Call-Button']}>
+                Book a call
+              </button>
+            </div>
+
+            <p className={styles['service-Description']}>
+              Enhance your team's capabilities with our comprehensive Security
+              Training programs. Recognizing the critical importance of
+              maintaining safety within your team and community, our expert-led
+              training imparts the latest security best practices. Your team
+              will learn to identify potential vulnerabilities, prevent data
+              breaches, and manage security incidents effectively. From
+              configuring recommended security settings and permissions to
+              implementing multi-factor authentication, our training ensures
+              thorough coverage. Empower your team with the knowledge needed to
+              protect your community from potential threats.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
