@@ -1,0 +1,290 @@
+body {
+  margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    height: 120px;
+    width: 100%;
+                                                
+  }
+  
+  @media (max-width: 720px) {
+    .header{
+       height: 100px;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Satoshi', sans-serif;
+    margin: 0 0 0 85px;
+    font-size: 25px;
+
+                                            
+  }
+  
+  @media (max-width: 830px) {
+    .logo {
+        margin: 0 0 0 45px;
+    }
+  }
+ 
+  @media (max-width: 730px) {
+    .logo {
+        font-size: 18px;
+        margin: 50px 0 29px 30px;
+        z-index: 2;
+    }
+  }
+
+  .drew {
+    color: #67CBAB;
+    font-style: italic;
+    font-weight: bold;
+    
+  }
+  .dre_w {
+    color: #67CBAB;
+    font-weight: bold;
+    
+  }
+  
+  .security {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+
+  }
+  
+  .tagline {
+    font-size: 16px;
+    color: #F5EFE6;
+    margin-left: 30px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Satoshi', sans-serif;
+    
+  }
+  
+  @media (max-width: 1200px) {
+    .tagline {
+        display: none;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 21.58px;
+  }
+
+  @media (max-width: 960px) {
+    .social {
+        display: none;
+    }
+  }
+
+  .toolsButton, .call-Button {
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+  }
+
+  @media (max-width: 730px) {
+    .call-Button{
+       display: none;
+    }
+  }
+  
+  .toolsButton {
+    border: 1px solid #F5EFE6;
+    background-color: transparent;
+    color: #f5efe6;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 48px;
+    max-height: 42px;
+    padding: 11px 0 11px 26px;
+  }
+  
+  .toolsButton:hover {
+    color:#F5EFE6;
+  }
+  
+  @media (max-width: 730px) {
+    .toolsButton{
+       display: none;
+    }
+  }
+
+  .arrow {
+    background-color: #F5EFE6;
+    border-radius: 13.5px;
+    margin-left: 0.5rem;
+    transform: rotate(270deg);
+    height: 24px;
+    width: 27px;
+    margin-right: 20px;
+    padding-top: 3px;
+  }
+  
+  .call-Button {
+    background-color: #f5efe6;
+    color: #000;
+    margin: 0 117px 0 0;
+    padding: 11px 25px 11px 26px;
+    max-height: 42px;
+  }
+  
+  @media (max-width: 830px) {
+    .call-Button{
+      margin: 0 56px 0 0;
+    }
+  }
+
+  .call-Button:hover {
+    background-color: #f5efe6;
+    color: #000;
+  }
+
+  .menu-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #F5EFE6;
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 39px 34px 17px 0;
+    position: relative;
+    z-index: 2;
+
+  }
+  
+  @media (min-width: 730px) {
+    .menu-button{
+       display: none;
+    }
+  }
+
+  .menu-icon {
+    width: 16px; 
+    height: 11px;
+  }
+
+  .fullscreen-panel {
+    transform: translateX(100%);
+  }
+
+  @media (min-width: 320px) {
+    .fullscreen-panel{
+       display: none;
+    }
+  }
+
+  .fullscreen-panel-open {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(0); 
+    transition: transform 240ms ease-in-out;
+    z-index: 1;
+    background-image: url('../assets/sideBG.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #F5EFE6;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .toolsButton-side, .callButton-side  {
+    color: #F5EFE6;
+    font-size: 39px;
+    font-weight: 500;
+    line-height: 47px;
+    border: none;
+    line-height: 42px;
+    background-color: transparent;
+    font-family: 'Satoshi', sans-serif;
+    
+  }
+
+  .toolsButton-side {
+    margin: 178px 56px 55px 57px;
+  }
+
+  .arrow-side {
+    background-color: #F5EFE6;
+    border-radius: 13.5px;
+    margin-left: 0.5rem;
+    transform: rotate(270deg);
+    height: 24px;
+    width: 27px;
+  }
+
+  .callButton-side {
+    margin: 0 56px 269px 57px;
+  }
+
+  .side-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Satoshi', sans-serif;
+    width: 100%;
+    background-color: #000;
+
+  }
+
+  .in-touch {
+    color: #F5EFE6;
+    font-size: 19px;
+    line-height: 32px;
+    margin: 0;
+
+  }
+
+  .x-contact {
+    color: #67CBAB;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+
+  .social-side {
+    margin: 18px 0 101.88px 0;
+    background-color: #000;
+  }
